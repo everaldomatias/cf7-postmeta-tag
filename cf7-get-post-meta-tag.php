@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       CF7 Postmeta Tag por EveraldoDev
+ * Plugin Name:       CF7 Get Posy Meta Tag by EveraldoDev
  * Plugin URI:        https://everaldo.dev/plugins/
- * Description:       Plugin to custom and improvements WordPress.
- * Version:           0.0.3
+ * Description:       Adiciona uma tag personalizada no Contact Form 7 para exibir metadados (post meta).
+ * Version:           0.0.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Everaldo Matias
@@ -15,14 +15,13 @@
  * Domain Path:       /languages
  */
 
-function cf7_postmeta_tag_plugin_activate() {
+function cf7_get_postmeta_tag_plugin_activate() {
     flush_rewrite_rules();
 }
 
-register_activation_hook( __FILE__, 'cf7_postmeta_tag_plugin_activate' );
+register_activation_hook( __FILE__, 'cf7_get_postmeta_tag_plugin_activate' );
 
-define( 'CF7_POSTMETA_TAG_VERSION', '0.0.3' );
-define( 'CF7_POSTMETA_TAG_PATH', plugins_url( '/', __FILE__ ) );
+define( 'CF7_GET_POSTMETA_TAG_VERSION', '0.0.1' );
+define( 'CF7_GET_POSTMETA_TAG_PATH', plugins_url( '/', __FILE__ ) );
 
-require_once( 'includes/enqueues.php' );
 require_once( 'includes/functions.php' );
